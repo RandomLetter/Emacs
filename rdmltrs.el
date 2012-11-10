@@ -11,6 +11,11 @@
 (starter-kit-load "ruby")
 
 
+;;Textmate Stuff
+(add-to-list 'load-path "~/.emacs.d/site-lisp/textmate/")
+(require 'textmate)
+(textmate-mode)
+
 ;;Turn off global hi-line mode
 (remove-hook 'prog-mode-hook 'esk-turn-on-hl-line-mode)
 (global-hl-line-mode nil)
@@ -66,10 +71,6 @@
 
 (add-hook 'org-mode-hook 'turn-on-font-lock)  ; Org buffers only
 
-
-;;Color ZenBURN!!!
-;;(push "~/.emacs.d/site-lisp/" custom-theme-load-path)
-;;(load-theme 'zenburn)
 ;; Effective Emacs Customizations
 
 ;; Invoke M-x without Alt Key: C-x(c)-C-m = M-x
